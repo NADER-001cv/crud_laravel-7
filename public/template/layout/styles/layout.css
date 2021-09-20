@@ -1,0 +1,266 @@
+@charset "utf-8";
+/*
+Template Name: Foxclore
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("fontawesome-free/css/all.css");
+@import url("framework.css");
+
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+.row0, .row0 a{}
+.row1, .row1 a{}
+.row2, .row2 a{}
+.row3, .row3 a{}
+.row4, .row4 a{}
+.row5, .row5 a{}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{padding:50px 0;}
+
+#header #logo *{margin:0; padding:0; line-height:1;}
+#header #logo h1{font-size:32px;}
+#header #logo p{font-size:.8rem;}
+
+#header ul{}
+#header ul li{}
+#header ul li div{position:relative; min-height:45px; padding:0 0 0 60px; line-height:1; word-wrap:break-word;}
+#header ul li div i{position:absolute; top:0; left:0; width:45px; height:45px; line-height:45px; font-size:16px; text-align:center; border-radius:50%;}
+#header ul li div span{display:block; padding:4px 0 0 0;}
+#header ul li div strong{display:block; margin:0 0 8px 0;}
+
+#header div:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
+
+
+/* Navwrapper
+--------------------------------------------------------------------------------------------------------------- */
+#navwrapper{padding:0 0 0 20px;}
+
+#navwrapper #searchform{display:block; position:relative; float:right; height:58px; line-height:1; z-index:999; border-radius:10px 0;}
+#navwrapper #searchform::after{display:block; height:58px; line-height:58px; padding:0 15px; font-size:20px; font-family:"Font Awesome 5 Free"; font-weight:900; content:"\f002"/* fa-search */;}
+#navwrapper #searchform:hover::after, #navwrapper #searchform button{cursor:pointer;}
+#navwrapper #searchform > div{position:absolute; top:58px; right:0; width:280px; visibility:hidden; opacity:0/* Required for transition effect */;}
+#navwrapper #searchform:hover > div{visibility:visible; opacity:1/* Required for transition effect */;}
+#navwrapper #searchform form{display:block; position:relative;}
+#navwrapper #searchform form *{border:none;}
+#navwrapper #searchform input{display:block; width:100%; height:36px; padding:8px 40px 8px 10px; font-size:1rem;}
+#navwrapper #searchform ::placeholder{text-transform:capitalize;}
+#navwrapper #searchform button{display:block; position:absolute; top:3px; right:2px; height:30px; font-size:16px; line-height:1;}
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:180px 0;}
+
+#pageintro article{display:block; max-width:55%;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem;}
+#pageintro p:first-of-type{margin:0 0 20px 0; text-transform:uppercase; font-size:1.6rem; letter-spacing:2px;}
+#pageintro p:last-of-type{font-size:1.2rem;}
+#pageintro footer{margin-top:50px;}
+
+
+/* Content Area
+--------------------------------------------------------------------------------------------------------------- */
+.container{padding:80px 0;}
+
+/* Content */
+.container .content{}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle *{margin:0;}
+
+/* Introblocks */
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:80px 0;}
+
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;}
+
+
+/* Transition Fade
+This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+Delete it completely to stop fading
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .3s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+
+/* Top Navigation */
+#mainav{display:block; float:left;}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none; text-align:left;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:block; float:left; position:relative; margin:0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:20px;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:25px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+#mainav form{display:none; width:100%; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:none;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+
+/* Breadcrumb */
+
+
+/* Sidebar Navigation */
+
+
+
+/* Tables
+
+
+
+/* Font Awesome Social Icons
+--------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#474747; background-color:#FFFFFF;}
+a{color:#41C379;}
+a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+hr, .borderedbox{border-color:#D7D7D7;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#41C379;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.7);}
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#41C379; border-color:#41C379;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+.imgover:hover::before{background-color:rgba(0,0,0,.55);}
+.imgover, .imgover:hover::after{color:#41C379;}
+
+
+/* Rows */
+.row0, .row0 a{}
+.row1, .row1 a{}
+.row2{color:#474747; background-color:#F4F4F4;}
+.row3{color:#474747; background-color:#FFFFFF;}
+.row4{color:#C1C2C4; background-color:#323639;}
+.row5, .row5 a{color:#C1C2C4; background-color:#2A2D34;}
+
+.coloured{color:#FFFFFF; background:linear-gradient(90deg, #41C379, #37AE6A);}
+
+
+/* Header */
+#header #logo a{color:inherit;}
+#header ul li div i{background-color:#FFFFFF;}
+#header ul li div:hover i{color:#FFFFFF; background-color:#41C379;}
+
+
+/* Navwrapper */
+#navwrapper{color:#FFFFFF; background-color:rgba(0,0,0,.35);}
+
+
+
+/* Page Intro */
+
+
+
+
+
+
+
+/* Footer 
+
+
+/* Navigation */
+#mainav{}
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#41C379; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(65,195,121,.5);/* #41C379 */ border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#41C379;}
+#mainav form select{color:#474747; background-color:#FFFFFF;}
+
+#breadcrumb a{color:inherit; background-color:inherit;}
+#breadcrumb li:last-child a{color:#41C379;}
+
+.container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar nav a:hover{color:#41C379;}
+
+.pagination a, .pagination strong{border-color:#D7D7D7;}
+.pagination .current *{color:#FFFFFF; background-color:#41C379;}
+
+#backtotop{color:#FFFFFF; background-color:#41C379;}
+
+
+/*
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1140px){
+	.hoc{max-width:1140px;}
+}
+
+@media screen and (min-width:978px) and (max-width:1140px){
+	.hoc{max-width:95%;}
+}
+
+
+/* Mobile Devices
+-
