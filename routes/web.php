@@ -49,17 +49,15 @@ Route::get('/', function () {
  */
 
 
-Route::get('posts','PostController@index') ;
-Route::get('posts/{id}','PostController@show')->name('posts.show') ;
+Route::get('/posts','PostController@index') ;
+Route::get('/posts/{id}','PostController@show')->name('posts.show') ;
 Route::get('/create','PostController@getForm')->name('posts.getform') ;
-Route::post('posts/store','PostController@saveForm')->name('posts.saveform') ;
+Route::post('/posts/store','PostController@saveForm')->name('posts.saveform') ;
 
-Route::get('{id}/edit','PostController@edit')->name('post.edit') ;
-Route::put('posts/','PostController@update') ;
-
-
-
-
+Route::get('/edit/{id}','PostController@edit')->name('post.edit') ;
+Route::post('/update/{id}','PostController@update')->name('post.update') ;
+Route::get('/delete/{id}','PostController@delete')->name('post.delete') ;
+Route::get('/deleted/{id}','PostController@deleteagain')->name('posts.deleted') ;
 
 
 
@@ -72,10 +70,11 @@ Route::put('posts/','PostController@update') ;
 
 
 
-// Route::group([ 'prefix'  =>'users','namespace' => 'front'],function(){
-//    Route::get('allshow','ShowController@getshow');
-//    Route::post('save','ShowController@saveshow');
-//    Route::delete('delete','ShowController@deleteshow');
-//    Route::put('update','ShowController@updatshow');
-// });
+
+
+
+
+Route::group([ 'prefix'  =>'users','namespace' => 'front'],function(){
+    Route::get('/about','ShowController@about' ) ;
+});
     

@@ -23,6 +23,7 @@ return view('members')->with(['members'=>memberinfo,'teams'=>teamInfo,'points'=>
     
     public function about() {
         // $name = "nader";
-        return view('about')-> with(['name' => "nader"]);
+        $my_arr = [1,2,3,4,5];
+        return view('about')-> with(['name' => "nader",'arr' =>   $my_arr]);
     }
 }

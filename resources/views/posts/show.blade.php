@@ -24,8 +24,9 @@
                             {{$posts->created_at}}
                           </p>
                         </small>
-                      <a href="{{'/'. $posts->id.'/edit'}}" class="btn btn-primary">Edit</a>
-                      <a href="#" class="btn btn-danger">Delete</a>
+                      {{-- <a href="{{'/'. $posts->id.'/edit'}}" class="btn btn-primary">Edit</a> --}}
+                      <a href="{{'/edit'.'/' . $posts->id}}" class="btn btn-primary">Edit</a>
+                      <a href="{{route('post.delete' ,$posts->id)}}" class="btn btn-danger">Delete</a>
                     </div>
                   </div>
            </div>
@@ -34,3 +35,9 @@
     </div>
 
 @endsection
+
+
+{{-- 
+  
+  https://theprogrammedwords.hashnode.dev/skills-you-need-to-become-a-front-end-developer
+  --}}

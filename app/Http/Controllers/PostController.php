@@ -56,7 +56,7 @@ class PostController extends Controller
           'description'  => 'required|max:200'
     ]) ;
 
-    
+   
     $post =  Post::find($id);
     $post->name = $request-> name;
     $post->description = $request->description ;
@@ -64,6 +64,32 @@ class PostController extends Controller
     return  redirect('/posts')->with('status','post was updated  success')  ;
 
 
+      }
+
+      public function delete($id) {
+          $post_delete = Post::find($id) ;
+                
+             if (!$post_delete) 
+           
+               return  redirect()->back() ;
+             
+
+          $post_delete ->delete();
+
+          return redirect('/posts')->with('success','deleted was success ok ') ;
+      }
+      public function deleteagain($id) 
+      {
+        $post_deleted = Post::where('id',$id)->first() ;
+
+        if (!$post_deleted) 
+          
+        return  redirect()->back();
+
+        $post_deleted->delete() ;
+
+        return redirect()->route('posts.deleted',$id)->with(['success'  => 'deleted was success']);
+        
       }
     
     }

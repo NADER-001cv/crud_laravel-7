@@ -30,11 +30,11 @@
                 
               </td>
               <td>
-                <button type="button" class="btn btn-danger">
+                <a href="{{route('posts.deleted',$post->id)}}" type="button" class="btn btn-danger">
 
                  
                   Delete
-                </button>
+                </a>
 
 
               </td>
