@@ -96,7 +96,7 @@ Route::group([ 'prefix'  =>'users','namespace' => 'front'],function(){
 
         Route::get('testar',function(){
 
-            return 'hy !'  ;
+            return 'hy   no one here !'  ;
         })  ;
 
      }) ;
