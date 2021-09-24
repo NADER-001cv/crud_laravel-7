@@ -4,10 +4,15 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/test', function () {
 //     return  '<h1>welcome laravel again</h1>';
@@ -78,3 +83,28 @@ Route::group([ 'prefix'  =>'users','namespace' => 'front'],function(){
     Route::get('/about','ShowController@about' ) ;
 });
     
+
+  ###############"  CRUD  BY TABLE  PRODUCTS  #################
+
+  Route::resource('products','ProductController')  ;
+  Route::get('products/softdelete/{id}','ProductController@softdelete')->name('product.softdelete')  ;
+
+
+  
+
+     Route::group(  [ 'prefix' => LaravelLocalization::setLocale()  ], function(){
+
+        Route::get('testar',function(){
+
+            return 'hy !'  ;
+        })  ;
+
+     }) ;
+
+    //  group(
+    //     [
+          
+    //         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+        
+    //     ]
+    // )->

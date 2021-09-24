@@ -42,6 +42,16 @@ Licence URI: https://www.os-templates.com/template-terms
         <li><a href="{{url('/create')}}">
           create post
         </a></li>
+
+        
+
+        <li><a href="{{route('register')}}">
+          register
+        </a></li>
+
+        <li><a href="{{route('login')}}">
+          login
+        </a></li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->

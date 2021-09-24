@@ -11,7 +11,7 @@ class PostController extends Controller
 
         // debuger
        // dd(Post::all()) ;
-       $posts = Post::paginate(5) ;
+       $posts = Post::paginate(2) ;
       // $posts = Post::all() ;
         return view('posts.index',compact('posts')) ;
     }
